@@ -1,0 +1,237 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body,
+button {
+  margin: 0;
+  border: 0;
+}
+body {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.5em;
+}
+p {
+  color: #999;
+}
+
+// variables
+$primary-color: #000;
+$secondary-color: #fff;
+$accent-color: #0a0;
+
+$nav-margin-y: 10px;
+$nav-min-height: 50px;
+$nav-height: ($nav-margin-y * 2) + $nav-min-height;
+$margin: 20px;
+
+header {
+  color: $secondary-color;
+}
+
+nav {
+  // position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: $nav-height;
+  min-height: $nav-min-height;
+  margin: $margin;
+  .navbar__container__logo {
+    .navbar__logo--icon {
+      background-color: rgb(0, 140, 0);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+    }
+  }
+}
+.background--tint {
+  height: inherit;
+  padding-top: $nav-height * 2;
+  padding-bottom: $nav-height * 2;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+header {
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+section {
+    h2{
+        margin-bottom: 0;
+        padding-bottom:0;
+    }
+    text-align: center;
+  padding: $nav-height 0;
+  .container {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .container__infographics {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 100px;
+    .container__infographics__item {
+      width: 30%;
+    }
+    &--column {
+      flex-flow: column nowrap;
+      margin: 20px 0;
+      padding: 0;
+    }
+  }
+}
+//relax section
+
+.container__relax {
+  display: flex;
+  .section__left__column {
+    width: 30%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background-color: #ddd;
+  }
+  .section__right__column {
+    width: 70%;
+    background: no-repeat;
+    background-size: cover;
+    color: $secondary-color;
+    text-align: left;
+    .background--tint {
+      display: flex;
+      flex-flow: column nowrap;
+      padding-left: 3em;
+      justify-content: space-around;
+    }
+  }
+}
+
+// lates project
+
+.latestproject {
+  background-repeat: no-repeat;
+  background-position: right;
+  h4 {
+    margin-bottom: 0;
+  }
+  p {
+    margin-top: 0;
+  }
+  .container__leftalign {
+    text-align: left;
+    width: 40%;
+    margin-left: 10%;
+    margin-top: 100px;
+  }
+
+  .container__infographics__item--column {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    .image__container {
+      height: 80px;
+      width: 80px;
+      border: 3px solid black;
+      border-radius: 100%;
+      img {
+        margin: auto;
+        margin-top: 25%;
+        margin-left: 25%;
+      }
+    }
+    .infographic__text__container {
+      margin-left: 20px;
+    }
+  }
+}
+
+.row-2 {
+    margin-top: 100px;
+    
+  display: flex;
+  flex-flow: column nowrap;
+  .row-2-1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin: 0 5%;
+    .image__container {
+      width: 80px;
+      height: 80px;
+      border: 3px solid #666;
+      border-radius: 100%;
+      img {
+        margin-top: 15px;
+      }
+    }
+    span {
+        height: 50%;
+      width: 10%;
+      border-bottom: 3px solid #666;
+    }
+  }
+  .row-2-2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    .row-2-2__item {
+      width: 20%;
+    }
+  }
+}
+
+
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+ul.list__tick {
+  list-style-image: url(../img/list-check.png);
+  margin-bottom: 50px;
+  li {
+    position: relative;
+    color: #999;
+    margin-bottom: 10px;
+  }
+}
+.font--accent {
+  color: $accent-color;
+}
+.button__submit {
+  width: 300px;
+  padding: 20px 0;
+  text-transform: uppercase;
+  border-radius: 50%;
+  &--green {
+    color: $secondary-color;
+    background-color: $accent-color;
+  }
+}
+#culture-values {
+  background-color: #ddd;
+}
