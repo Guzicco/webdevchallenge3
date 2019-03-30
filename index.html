@@ -11,20 +11,20 @@
     <nav>
       <div class="navbar__container__logo">
         <div
-          class="navbar__logo--icon"
+          class="navbar__logo-icon"
           style="background-image: url(./img/leaf.png)"
         ></div>
         <span>TREEHOUSE</span>
       </div>
       <ul class="menu">
-        <il class="menu__item"><a href="home">home</a></il>
-        <il class="menu__item"><a href="about">about</a> </il>
-        <il class="menu__item"><a href="blog">blog</a> </il>
-        <il class="menu__item"><a href="portfolio">portfolio</a> </il>
-        <il class="menu__item"><a href="contact">contact</a></il>
+        <il class="menu__item"><a href="/home">home</a></il>
+        <il class="menu__item"><a href="/about">about</a> </il>
+        <il class="menu__item"><a href="/blog">blog</a> </il>
+        <il class="menu__item"><a href="/portfolio">portfolio</a> </il>
+        <il class="menu__item"><a href="/contact">contact</a></il>
       </ul>
     </nav>
-    <header style="background-image: url(./img/title-bg.png)">
+    <header class="text--secondary-color" style="background-image: url(./img/title-bg.png)">
       <div class="background--tint">
         <h1>
           creative digital
@@ -35,6 +35,9 @@
         <p>
           Lorem ipsum purus consequat sem cure.
         </p>
+
+        <!-- BEM - block__element--modification -->
+        <!-- button--primary -->
         <button class="button__submit button__submit--green" href="">
           view portfolio
         </button>
@@ -49,7 +52,7 @@
       </p>
       <div class="container__infographics">
         <div class="container__infographics__item">
-          <div class="image__container">
+          <div class="icon__container icon--circle-border">
             <img src="./img/Icon-Heart.png" alt="Heart Icon" />
           </div>
           <h3>beautiful designs</h3>
@@ -59,7 +62,7 @@
           </p>
         </div>
         <div class="container__infographics__item">
-          <div class="image__container">
+          <div class="icon__container icon--circle-border">
             <img src="./img/Icon-Mobile.png" alt="Telephone Icon" />
           </div>
           <h3>responsive web</h3>
@@ -69,7 +72,7 @@
           </p>
         </div>
         <div class="container__infographics__item">
-          <div class="image__container">
+          <div class="icon__container icon--circle-border">
             <img src="./img/Icon-Graph.png" alt="Graph Icon" />
           </div>
           <h3>marketing tools</h3>
@@ -80,43 +83,47 @@
         </div>
       </div>
     </section>
-    <section class="container__relax" id="relax">
+    <section class="container__relax text--secondary-color" id="relax">
       <div
-        class="section__left__column"
+        class="section__left-column"
         style="background-image: url(./img/relax-lf-gear.png)"
-      ></div>
+      >
+      </div>
       <div
-        class="section__right__column"
+        class="section__right-column"
         style="background-image:url(./img/relax-rt-bg.png)"
       >
         <div class="background--tint">
-          <h2>Just Relax <span class="font--accent">&</span></h2>
-          <h2>let us do the heavy lifting</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            consectetur aspernatur, fugit odio est aut repellendus fugiat
-            pariatur molestiae in dolorem quia natus inventore qui, amet debitis
-            magnam tenetur nihil.
-          </p>
-          <ul class="list__tick">
-            <li>Initial Setup & Customizations</li>
-            <li>Regular Updates</li>
-            <li>Round The Clock Support</li>
-          </ul>
-          <button href="" class="button__submit button__submit--green">
-            learn more
-          </button>
+          <div class="section__right-column__item">
+
+            <h2>Just Relax <span class="font--accent">&</span></h2>
+            <h2>let us do the heavy lifting</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              consectetur aspernatur, fugit odio est aut repellendus fugiat
+              pariatur molestiae in dolorem quia natus inventore qui, amet debitis
+              magnam tenetur nihil.
+            </p>
+            <ul class="list__tick">
+              <li>Initial Setup & Customizations</li>
+              <li>Regular Updates</li>
+              <li>Round The Clock Support</li>
+            </ul>
+            <button href="" class="button__submit button__submit--green">
+              learn more
+            </button>
+          </div>
         </div>
       </div>
     </section>
     <section
-      class="latestproject"
+      class="latest-project"
       id="latest-project"
       style="background-image: url(./img/projects-bg.png)"
     >
       <h2>Latest Project</h2>
       <p>Proin iaculis purus consequat sem cure</p>
-      <div class="container__leftalign">
+      <div class="container__left-align">
         <h3>Developing a framework</h3>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, illo
@@ -125,8 +132,12 @@
           Enim explicabo inventore fugit!
         </p>
         <div class="container__infographics container__infographics--column">
-          <div class="container__infographics__item--column">
-            <div class="image__container">
+          <div
+            class="
+          infographics-container__item--column
+          container__infographics__item--column"
+          >
+            <div class="icon__container  icon--circle-border">
               <img src="./img/Icon-Basket.png" alt="Basket Icon" />
             </div>
             <div class="infographic__text__container">
@@ -135,7 +146,7 @@
             </div>
           </div>
           <div class="container__infographics__item--column">
-            <div class="image__container">
+            <div class="icon__container  icon--circle-border">
               <img src="./img/Icon-Laptop.png" alt="Basket Icon" />
             </div>
             <div class="infographic__text__container">
@@ -144,7 +155,7 @@
             </div>
           </div>
           <div class="container__infographics__item--column">
-            <div class="image__container">
+            <div class="icon__container  icon--circle-border">
               <img src="./img/Icon-Locked.png" alt="Basket Icon" />
             </div>
             <div class="infographic__text__container">
@@ -165,52 +176,49 @@
     <section id="culture-values">
       <h2>Culture & Values</h2>
       <p>Proin iaculis purus consequat cure</p>
-      <div class="row-2">
-        <div class="row-2-1">
-          <div class="image__container">
+      <div class="container__infographics">
+        <div class="container__infographics__item">
+          <div class="icon__container icon--circle-border">
             <img src="./img/Icon-Music.png" alt="" />
           </div>
-          <span class="line__spacing"></span>
-          <div class="image__container">
+          <div class="row__text-container">
+            <h3>Work-life Balance</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              reprehenderit quis, dolores libero suscipit autem adipisci, esse
+            </div>
+          </div>
+        <div class="container__infographics__item">
+          <div class="icon__container icon--circle-border">
             <img src="./img/Icon-Graph2.png" alt="" />
           </div>
-          <span class="line__spacing"></span>
-          <div class="image__container">
+          <div class="row__text-container">
+            <h3>Quality over Quantity</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              reprehenderit quis, dolores libero suscipit autem adipisci, esse
+            </div>
+          </div>
+        <div class="container__infographics__item">
+          <div class="icon__container icon--circle-border">
             <img src="./img/Icon-Star.png" alt="" />
           </div>
-        </div>
-        <div class="row-2-2">
-          <div class="row-2-2__item">
-            <h3>work-life balance</h3>
+          <div class="row__text-container">
+            <h3>Deliver Excellence</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sit
-              suscipit sed nulla expedita sapiente. Corporis nihil voluptas et
-            </p>
-          </div>
-          <div class="row-2-2__item">
-            <h3>quality over quantity</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sit
-              suscipit sed nulla expedita sapiente. Corporis nihil voluptas et
-            </p>
-          </div>
-          <div class="row-2-2__item">
-            <h3>deliver exellence</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sit
-              suscipit sed nulla expedita sapiente. Corporis nihil voluptas et
-            </p>
-          </div>
-        </div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              reprehenderit quis, dolores libero suscipit autem adipisci, esse
+            </div>
       </div>
     </section>
-    <section id="clients">
+    <section class="section__container" 
+    id="clients">
       <h2>Our Awesome Clients</h2>
       <p>Proin iaculis purus consequat sem cure.</p>
       <div class="client__comment">
         <div class="circle"></div>
-        <div class="client__quote">
-          <p>
+        <div class="quote client__quote">
+          <p class="quote__text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
           </p>
           <p class="quote__author">
@@ -220,8 +228,8 @@
       </div>
       <div class="client__comment --reversed">
         <div class="circle"></div>
-        <div class="client__quote">
-          <p>
+        <div class="quote client__quote">
+          <p class="quote__text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A
           </p>
           <p class="quote__author">
@@ -230,37 +238,37 @@
         </div>
       </div>
     </section>
-    <section id="contact">
-      <h2>ready to talk about your next project?</h2>
-      <a href="" class="button__submit--whiteborder">contact us</a>
+    <section id="contact" class="section__container">
+      <h2 class="text--secondary-color">ready to talk about your next project?</h2>
+      <button class="button__submit button__submit--white">contact us</button>
     </section>
-    <section id="credits">
+    <section id="credits" class="container__infographics">
       <div class="container__credit-logo">
-        <img src="" alt="" />
+        <img src="./img/Envato.png" alt="Envato" />
       </div>
       <div class="container__credit-logo">
-        <img src="" alt="" />
+        <img src="./img/WordPress.png" alt="WordPress" />
       </div>
       <div class="container__credit-logo">
-        <img src="" alt="" />
+        <img src="./img/Tuts.png" alt="Tuts" />
       </div>
       <div class="container__credit-logo">
-        <img src="" alt="" />
+        <img src="./img/Microlancer.png" alt="Microlancer" />
       </div>
     </section>
-    <section id="latest">
-      <div class="col-3">
-        <div class="col-3-1">
+    <section id="latest" class="text--secondary-color">
+      <div class="container__latest">
+        <div class="container__latest__item">
           <h4>contact us</h4>
-          <ul class="latest__contact__list">
+          <ul class="latest__list --contact-us">
             <li>55 Main st. Toronto, ON MIH 3A5</li>
             <li>(416) 555-5252</li>
             <li>hello@treehouse.com</li>
           </ul>
         </div>
-        <div class="col-3-1">
+        <div class="container__latest__item">
           <h4>lastest posts</h4>
-          <ul class="latest__post__list">
+          <ul class="latest__list --post">
             <li>Made With Love In Toronto</li>
             <li>Startup News & Emerging Tech</li>
             <li>Bitcoin Will Soon Rule The World</li>
@@ -268,9 +276,9 @@
             <li>Learn Web Design In 30 Days!</li>
           </ul>
         </div>
-        <div class="col-3-1">
+        <div class="container__latest__item">
           <h4>latest tweets</h4>
-          <ul class="latest__tweets__list">
+          <ul class="latest__list --tweet">
             <li>
               Confucius: Life is really simple, but we insist on making it
               complicated.

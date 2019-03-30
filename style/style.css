@@ -12,10 +12,6 @@ button {
   border: 0;
 }
 
-body {
-  display: block;
-}
-
 h1,
 h2,
 h3,
@@ -35,7 +31,7 @@ p {
   color: #999;
 }
 
-header {
+.text--secondary-color {
   color: #fff;
 }
 
@@ -51,20 +47,13 @@ nav {
   margin: 20px;
 }
 
-nav .navbar__container__logo .navbar__logo--icon {
+nav .navbar__container__logo .navbar__logo-icon {
   background-color: #008c00;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 20px;
   height: 20px;
   border-radius: 100%;
-}
-
-.background--tint {
-  height: inherit;
-  padding-top: 140px;
-  padding-bottom: 140px;
-  background: rgba(0, 0, 0, 0.75);
 }
 
 header {
@@ -75,20 +64,64 @@ header {
 
 section {
   text-align: center;
-  padding: 70px 0;
+  padding: 70px 100px;
 }
 
-section h2 {
-  margin-bottom: 0;
-  padding-bottom: 0;
+.section__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-section .container {
-  background-repeat: no-repeat;
-  background-size: cover;
+.section__container .--reversed {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: reverse !important;
+      -ms-flex-flow: row-reverse wrap !important;
+          flex-flow: row-reverse wrap !important;
 }
 
-section .container__infographics {
+.section__container .client__comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 20px 0;
+}
+
+.section__container .client__comment .circle {
+  height: 150px;
+  width: 150px;
+  background-color: #eee;
+  border-radius: 100%;
+}
+
+.section__container .client__comment .quote {
+  background-color: #eee;
+  padding: 10px;
+  margin: 30px;
+  min-width: 500px;
+}
+
+.section__container .client__comment .quote .quote__text {
+  color: #666;
+}
+
+.section__container .client__comment .quote .quote__author {
+  color: #5fc05f;
+  font-size: .9em;
+}
+
+.container__infographics {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,11 +130,7 @@ section .container__infographics {
   padding-top: 100px;
 }
 
-section .container__infographics .container__infographics__item {
-  width: 30%;
-}
-
-section .container__infographics--column {
+.container__infographics--column {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -110,13 +139,78 @@ section .container__infographics--column {
   padding: 0;
 }
 
+.container__infographics__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+}
+
+.container__infographics__item--column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.container__infographics div .icon__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+}
+
+.container__infographics .icon--circle-border {
+  border: 3px solid #666;
+  border-radius: 100%;
+}
+
+.container__infographics .infographic__text__container {
+  min-width: 200px;
+  margin-left: 20px;
+}
+
+.container__left-align {
+  text-align: left;
+  width: 40%;
+  margin-left: 10%;
+  margin-top: 100px;
+}
+
+.background--tint {
+  height: inherit;
+  padding-top: 140px;
+  padding-bottom: 140px;
+  background: rgba(0, 0, 0, 0.75);
+}
+
 .container__relax {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 70px 0;
 }
 
-.container__relax .section__left__column {
+.container__relax .section__left-column {
   width: 30%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -124,128 +218,29 @@ section .container__infographics--column {
   background-color: #ddd;
 }
 
-.container__relax .section__right__column {
+.container__relax .section__right-column {
   width: 70%;
   background: no-repeat;
   background-size: cover;
-  color: #fff;
   text-align: left;
 }
 
-.container__relax .section__right__column .background--tint {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+.container__relax .section__right-column__item {
   padding-left: 3em;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  width: 70%;
 }
 
-.latestproject {
+.latest-project {
   background-repeat: no-repeat;
   background-position: right;
 }
 
-.latestproject h4 {
+.latest-project h4 {
   margin-bottom: 0;
 }
 
-.latestproject p {
+.latest-project p {
   margin-top: 0;
-}
-
-.latestproject .container__leftalign {
-  text-align: left;
-  width: 40%;
-  margin-left: 10%;
-  margin-top: 100px;
-}
-
-.latestproject .container__infographics__item--column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.latestproject .container__infographics__item--column .image__container {
-  height: 80px;
-  width: 80px;
-  border: 3px solid black;
-  border-radius: 100%;
-}
-
-.latestproject .container__infographics__item--column .image__container img {
-  margin: auto;
-  margin-top: 25%;
-  margin-left: 25%;
-}
-
-.latestproject .container__infographics__item--column .infographic__text__container {
-  margin-left: 20px;
-}
-
-.row-2 {
-  margin-top: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-}
-
-.row-2 .row-2-1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  margin: 0 5%;
-}
-
-.row-2 .row-2-1 .image__container {
-  width: 80px;
-  height: 80px;
-  border: 3px solid #666;
-  border-radius: 100%;
-}
-
-.row-2 .row-2-1 .image__container img {
-  margin-top: 15px;
-}
-
-.row-2 .row-2-1 span {
-  height: 50%;
-  width: 10%;
-  border-bottom: 3px solid #666;
-}
-
-.row-2 .row-2-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.row-2 .row-2-2 .row-2-2__item {
-  width: 20%;
 }
 
 a {
@@ -263,28 +258,58 @@ ul.list__tick {
 }
 
 ul.list__tick li {
-  position: relative;
   color: #999;
   margin-bottom: 10px;
 }
 
 .font--accent {
-  color: #0a0;
+  color: #5fc05f;
 }
 
 .button__submit {
   width: 300px;
   padding: 20px 0;
   text-transform: uppercase;
-  border-radius: 50%;
+  border-radius: 50px;
 }
 
 .button__submit--green {
   color: #fff;
-  background-color: #0a0;
+  background-color: #5fc05f;
+}
+
+.button__submit--white {
+  border: 4px #fff solid;
+  color: #fff;
+  font-size: 1.2em;
+  background-color: #5fc05f;
+  border-radius: 10px;
 }
 
 #culture-values {
   background-color: #ddd;
+}
+
+#contact {
+  background-color: #5fc05f;
+}
+
+#latest {
+  background-color: #111;
+}
+
+.container__latest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: left;
+  margin: 0 50px;
+}
+
+.container__latest__item {
+  max-width: 30%;
 }
 /*# sourceMappingURL=style.css.map */
