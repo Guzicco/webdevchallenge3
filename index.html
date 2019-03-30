@@ -4,24 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
     <title>Web Dev Challenge 3</title>
     <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
     <nav>
       <div class="navbar__container__logo">
-        <div
+        <span           
           class="navbar__logo-icon"
-          style="background-image: url(./img/leaf.png)"
-        ></div>
-        <span>TREEHOUSE</span>
+          style="background-image: url(./img/leaf.png)">
+        </span>
+        <p>TREEHOUSE</p>
       </div>
       <ul class="menu">
-        <il class="menu__item"><a href="/home">home</a></il>
-        <il class="menu__item"><a href="/about">about</a> </il>
-        <il class="menu__item"><a href="/blog">blog</a> </il>
-        <il class="menu__item"><a href="/portfolio">portfolio</a> </il>
-        <il class="menu__item"><a href="/contact">contact</a></il>
+        <li class="menu__item"><a href="#home">home</a></li>
+        <li class="menu__item"><a href="/about">about</a> </li>
+        <li class="menu__item"><a href="/blog">blog</a> </li>
+        <li class="menu__item"><a href="/portfolio">portfolio</a> </li>
+        <li class="menu__item"><a href="/contact">contact</a></li>
       </ul>
     </nav>
     <header class="text--secondary-color" style="background-image: url(./img/title-bg.png)">
@@ -133,9 +134,7 @@
         </p>
         <div class="container__infographics container__infographics--column">
           <div
-            class="
-          infographics-container__item--column
-          container__infographics__item--column"
+            class="container__infographics__item--column"
           >
             <div class="icon__container  icon--circle-border">
               <img src="./img/Icon-Basket.png" alt="Basket Icon" />
@@ -169,7 +168,7 @@
             doloremque, fugiat suscipit unde quam explicabo quaerat mollitia
             velit ex perspiciatis rem?
           </p>
-          <a class="font--accent" href="">view details -></a>
+          <a class="font--accent" href="">VIEW DETAILS -></a>
         </div>
       </div>
     </section>
@@ -257,56 +256,146 @@
       </div>
     </section>
     <section id="latest" class="text--secondary-color">
-      <div class="container__latest">
-        <div class="container__latest__item">
+      <div class="footer__container">
+        <div class="footer__list">
           <h4>contact us</h4>
-          <ul class="latest__list --contact-us">
-            <li>55 Main st. Toronto, ON MIH 3A5</li>
-            <li>(416) 555-5252</li>
-            <li>hello@treehouse.com</li>
-          </ul>
+          <div class="list__item">
+            <div class="footer__icon">
+              <img src="./img/location.png">
+            </div>
+            <div class="footer__text">
+              55 Main St. <br>
+              Toronto, ON <br>
+              MIH 3A5
+            </div>
+          </div>
+          <div class="list__item">
+            <div class="footer__icon">
+              <img src="./img/iPhone.png">
+            </div>
+            <div class="footer__text">
+              (416) 555-5252
+            </div>
+          </div>
+          <div class="list__item">
+            <div class="footer__icon">
+              <img src="./img/email.png">
+            </div>
+            <div class="footer__text">
+              hello@treehouse.com
+            </div>
         </div>
-        <div class="container__latest__item">
-          <h4>lastest posts</h4>
-          <ul class="latest__list --post">
-            <li>Made With Love In Toronto</li>
-            <li>Startup News & Emerging Tech</li>
-            <li>Bitcoin Will Soon Rule The World</li>
-            <li>Wearable Technology On The Rise</li>
-            <li>Learn Web Design In 30 Days!</li>
-          </ul>
         </div>
-        <div class="container__latest__item">
+        <div class="footer__list">
+          <h4>Latest Posts</h4>
+          <a href="#">
+          <div class="list__item">
+              <div class="footer__icon">
+                <img src="./img/Icon-News.png">
+              </div>
+              <div class="footer__text">
+                Made With Love In Toronto
+              </div>
+            </div>
+          </a>
+          <a href="#">
+          <div class="list__item">
+              <div class="footer__icon">
+                <img src="./img/Icon-Photo.png">
+              </div>
+              <div class="footer__text">
+                Startup News & Emerging Tech
+              </div>
+            </div>
+          </a>
+          <a href="#">
+          <div class="list__item">
+              <div class="footer__icon">
+                <img src="./img/Icon-News.png">
+              </div>
+              <div class="footer__text">
+                Bitcoin Will Soon Rule The World
+              </div>
+            </div>
+          </a>
+          <a href="#">
+          <div class="list__item">
+              <div class="footer__icon">
+                <img src="./img/Icon-News.png">
+              </div>
+              <div class="footer__text">
+                Wearable Technology On The Rise
+              </div>
+            </div>
+          </a>
+          <a href="#">
+          <div class="list__item">
+              <div class="footer__icon">
+                <img src="./img/Icon-Media.png">
+              </div>
+              <div class="footer__text">
+                Learn Web Design In 30 Days!
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="footer__list">
           <h4>latest tweets</h4>
-          <ul class="latest__list --tweet">
-            <li>
-              Confucius: Life is really simple, but we insist on making it
-              complicated.
-              <p class="tweet__post__accent">#famousquotes</p>
-              <p class="tweet__publication__time">8 mins ago</p>
-            </li>
-            <li>
-              Grab the Free Treehouse web template at FreebiesXpress!
-              <p class="tweet__post__accent">#freebies #templates</p>
-              <p class="twwet__publication__time">2 days ago</p>
-            </li>
-          </ul>
+          <div class="list__item">
+            <div class="footer__icon">
+              <img src="./img/Icon-Twitter.png">
+            </div>
+              <a href="">
+              <div class="footer__text">
+                Confucius: Life is really simple, but we insist on making it
+                complicated.
+                <p class="tweet__post__accent">#famousquotes</p>
+                <p class="tweet__publication__time">8 mins ago</p>
+              </div>
+            </a>
+            </div>
+            <div class="list__item">
+              <div class="footer__icon">
+                <img src="./img/Icon-Twitter.png">
+              </div>
+              <a href="">
+                <div class="footer__text">
+                  Grab the Free Treehouse web template at FreebiesXpress!
+                  <p class="tweet__post__accent">#freebies #templates</p>
+                  <p class="tweet__publication__time">2 days ago</p>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <footer>
-      <p>Copyright 2014 FreebiesXpress.com</p>
-      <div class="footer__container__icon-logo">
-        <img src="./img/" alt="" />
+      <div class="footer__wrapper">
+        <p>Copyright 2014 FreebiesXpress.com</p>
+      <div class="footer__icon-wrapper">
+
+        <a href="#">
+          <div class="footer__icon-logo">
+            <img src="./img/Twitter.png" alt="Twitter" />
+          </div>
+        </a>
+        <a href="#">
+          <div class="footer__icon-logo">
+            <img src="./img/Facebook.png" alt="Facebook" />
+          </div>
+        </a>
+        <a href="#">
+          <div class="footer__icon-logo">
+            <img src="./img/Pinterest.png" alt="Pinterest" />
+          </div>
+        </a>
+        <a href="#">
+          <div class="footer__icon-logo">
+            <img src="./img/Google.png" alt="Google Plus" />
+          </div>
+        </a>
       </div>
-      <div class="footer__container__icon-logo">
-        <img src="" alt="" />
-      </div>
-      <div class="footer__container__icon-logo">
-        <img src="" alt="" />
-      </div>
-      <div class="footer__container__icon-logo">
-        <img src="" alt="" />
       </div>
     </footer>
   </body>

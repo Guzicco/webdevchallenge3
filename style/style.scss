@@ -2,7 +2,7 @@
 ::after,
 ::before {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body,
@@ -35,10 +35,9 @@ h2 {
 p {
   color: #999;
 }
-.text--secondary-color{
+.text--secondary-color {
   color: $secondary-color;
 }
-
 
 nav {
   // position: fixed;
@@ -46,17 +45,41 @@ nav {
   justify-content: space-between;
   height: $nav-height;
   min-height: $nav-min-height;
-  margin: $margin;
+  margin: $margin 200px;
   .navbar__container__logo {
+    margin-top: 12px;
     .navbar__logo-icon {
-      background-color: rgb(0, 140, 0);
+      display: inline-block;
+      background-color: $accent-color;
       background-repeat: no-repeat;
       background-position: 50% 50%;
-      width: 20px;
-      height: 20px;
+      width: 23px;
+      height: 23px;
       border-radius: 100%;
     }
+    p{
+      float: right;
+      margin: 2px 0 0 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #666;
+      // margin: 0;
+    }
   }
+  .menu{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    .menu__item{
+      margin-right: 25px;
+    }
+    a{
+      color: #999;
+      text-transform: uppercase;
+    }
+  }
+
 }
 
 header {
@@ -77,12 +100,12 @@ section {
   .--reversed {
     flex-flow: row-reverse wrap !important;
   }
-  
+
   .client__comment {
     display: flex;
     flex-flow: row wrap;
     margin: 20px 0;
-    
+
     .circle {
       height: 150px;
       width: 150px;
@@ -94,13 +117,13 @@ section {
       padding: 10px;
       margin: 30px;
       min-width: 500px;
-      
+
       .quote__text {
-        color: #666;  
+        color: #666;
       }
       .quote__author {
         color: $accent-color;
-        font-size: .9em;
+        font-size: 0.9em;
       }
     }
   }
@@ -196,13 +219,6 @@ section {
   }
 }
 
-a {
-  text-transform: uppercase;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
 
 ul.list__tick {
   list-style-image: url(../img/list-check.png);
@@ -220,35 +236,104 @@ ul.list__tick {
   padding: 20px 0;
   text-transform: uppercase;
   border-radius: 50px;
+  transition: width 0.3s ease-in;
+  cursor: pointer;
   &--green {
     color: $secondary-color;
     background-color: $accent-color;
   }
-  &--white{
+  &--green:hover {
+    text-decoration: underline;
+    width: 350px;
+  }
+  
+  &--white {
     border: 4px $secondary-color solid;
     color: $secondary-color;
-    font-size: 1.2em;  
+    font-size: 1.2em;
     background-color: $accent-color;
-    border-radius: 10px
+    border-radius: 10px;
+  }
+  &--white:hover {
+    text-decoration: underline;
+    width: 350px;
   }
 }
-#culture-values {
-  background-color: #ddd;
-}
-#contact{
-  background-color: $accent-color;
-}
-#latest{
-  background-color: #111;
-}
 
-.container__latest{
+.footer__container {
   display: flex;
   justify-content: space-between;
   text-align: left;
   margin: 0 50px;
-  &__item{
+  .footer__list {
+    min-width: 250px;
     max-width: 30%;
+    .list__item {
+      display: flex;
+      margin-bottom: 25px;
+      .footer__icon {
+        width: 40px;
+        flex-shrink: 0;
+      }
+      .footer__text {
+        align-self: center;
+        .tweet__post__accent {
+          color: $secondary-color;
+          margin: 0;
+          font-weight: bold;
+        }
+        .tweet__publication__time {
+          color: $secondary-color;
+          margin-bottom: 0;
+        }
+      }
     }
+  }
+}
+footer {
+  margin: 20px 0;
+  
+  .footer__wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  p {
+    position: absolute;
+    left: 10%;
+  }
+  .footer__icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    .footer__icon-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      background-color: #000;
+      margin: 0 5px;
+    }
+  }
+}
 
+#culture-values {
+  background-color: #ddd;
+}
+#contact {
+  background-color: $accent-color;
+}
+#latest {
+  background-color: #111;
+}
+a {
+  text-decoration: none;
+  color: $secondary-color;
+}
+a:hover {
+  text-decoration: underline;
 }
