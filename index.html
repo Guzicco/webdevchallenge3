@@ -16,8 +16,9 @@
           style="background-image: url(./img/leaf.png)">
         </span>
         <p>TREEHOUSE</p>
+        <button class="menu__toggle" id="menu-button">menu</button>
       </div>
-      <ul class="menu">
+      <ul  id="menu" class="menu">
         <li class="menu__item"><a href="#home">home</a></li>
         <li class="menu__item"><a href="/about">about</a> </li>
         <li class="menu__item"><a href="/blog">blog</a> </li>
@@ -53,6 +54,7 @@
       </p>
       <div class="container__infographics">
         <div class="container__infographics__item">
+        <!-- <div class="container__infographics--item"> -->
           <div class="icon__container icon--circle-border">
             <img src="./img/Icon-Heart.png" alt="Heart Icon" />
           </div>
@@ -110,9 +112,11 @@
               <li>Regular Updates</li>
               <li>Round The Clock Support</li>
             </ul>
-            <button href="" class="button__submit button__submit--green">
-              learn more
-            </button>
+            <a href="">
+              <button class="button__submit button__submit--green">
+                learn more
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -120,7 +124,6 @@
     <section
       class="latest-project"
       id="latest-project"
-      style="background-image: url(./img/projects-bg.png)"
     >
       <h2>Latest Project</h2>
       <p>Proin iaculis purus consequat sem cure</p>
@@ -210,8 +213,7 @@
             </div>
       </div>
     </section>
-    <section class="section__container" 
-    id="clients">
+    <section class="section__container" id="clients">
       <h2>Our Awesome Clients</h2>
       <p>Proin iaculis purus consequat sem cure.</p>
       <div class="client__comment">
@@ -225,7 +227,7 @@
           </p>
         </div>
       </div>
-      <div class="client__comment --reversed">
+      <div class="client__comment client__comment--reversed">
         <div class="circle"></div>
         <div class="quote client__quote">
           <p class="quote__text">
@@ -242,22 +244,21 @@
       <button class="button__submit button__submit--white">contact us</button>
     </section>
     <section id="credits" class="container__infographics">
-      <div class="container__credit-logo">
+      <div class="credit-logo">
         <img src="./img/Envato.png" alt="Envato" />
       </div>
-      <div class="container__credit-logo">
+      <div class="credit-logo">
         <img src="./img/WordPress.png" alt="WordPress" />
       </div>
-      <div class="container__credit-logo">
+      <div class="credit-logo">
         <img src="./img/Tuts.png" alt="Tuts" />
       </div>
-      <div class="container__credit-logo">
+      <div class="credit-logo">
         <img src="./img/Microlancer.png" alt="Microlancer" />
       </div>
     </section>
-    <section id="latest" class="text--secondary-color">
-      <div class="footer__container">
-        <div class="footer__list">
+    <section id="latest" class="text--secondary-color footer__container">
+        <div class="footer__column">
           <h4>contact us</h4>
           <div class="list__item">
             <div class="footer__icon">
@@ -286,7 +287,7 @@
             </div>
         </div>
         </div>
-        <div class="footer__list">
+        <div class="footer__column">
           <h4>Latest Posts</h4>
           <a href="#">
           <div class="list__item">
@@ -339,7 +340,7 @@
             </div>
           </a>
         </div>
-        <div class="footer__list">
+        <div class="footer__column">
           <h4>latest tweets</h4>
           <div class="list__item">
             <div class="footer__icon">
@@ -368,7 +369,6 @@
             </div>
           </div>
         </div>
-      </div>
     </section>
     <footer>
       <div class="footer__wrapper">
@@ -399,4 +399,5 @@
       </div>
     </footer>
   </body>
+  <script src="./index.js"></script>
 </html>
