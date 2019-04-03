@@ -1,6 +1,6 @@
-#WebDev Challenge 3
+# WebDev Challenge 3
 
-##Things learned:
+## Things learned:
 
 * **SCSS:**
     * usage of mediaquery (RWD design for tablets)
